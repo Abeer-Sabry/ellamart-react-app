@@ -1,9 +1,9 @@
 import React from "react";
 // ---- STYLED-COMPONENTS ---- //
-import { CustomerNeed, List, Wrapper } from "./DetailsStyle";
+import { CustomerNeed, List } from "./DetailsStyle";
 // ---- REUSABLE-COMPONENTS ---- //
 import { HeaderLinks } from "../../../reusableComponents/Links/Links";
-import { RowIcon } from "../../../reusableComponents/TitledIcon/TitledIcon";
+import { Row, RowIcon } from "../../../reusableComponents/TitledIcon/TitledIcon";
 // ---- ICONS---- //
 import { FaUserNinja } from "react-icons/fa";
 import { MdLanguage } from "react-icons/md";
@@ -12,7 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Details = () => {
   return (
-    <Wrapper>
+    <Row>
       <List>
         <li>
           {" "}
@@ -55,7 +55,7 @@ const Details = () => {
           <div className="choices"></div>
         </RowIcon>
       </CustomerNeed>
-    </Wrapper>
+    </Row>
   );
 };
 

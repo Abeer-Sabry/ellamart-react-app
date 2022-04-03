@@ -1,7 +1,8 @@
 import React from "react";
+import { Wrapper } from "./OfferStyle";
 
 const Offers = () => {
-  return <div>Offers</div>;
+  return <Wrapper>Offers</Wrapper>;
 };
 
 export default Offers;

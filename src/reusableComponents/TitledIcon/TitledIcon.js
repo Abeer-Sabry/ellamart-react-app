@@ -12,3 +12,6 @@ export const RowIcon = styled(ColumIcon)`
   justify-content: center;
   align-items: center;
 `;
+export const Row = styled(RowIcon)`
+  justify-content: space-between;
+`;
