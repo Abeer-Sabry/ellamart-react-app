@@ -1,6 +1,10 @@
 import React from "react";
 // ---- STYLED-COMPONENTS ---- //
 import { CustomerNeed, List } from "./DetailsStyle";
+// ---- COMPONENTS ---- //
+import NewInDrop from "../DropDowns/NewInDropDown/MainNewIn/NewInDrop";
+import MustHaveDrop from "../DropDowns/MustHaveDropDown/MainMustHave/MustHaveDrop";
+import TrendDrop from "../DropDowns/TrendDropDown/MainTrendDropDown/TrendDrop";
 // ---- REUSABLE-COMPONENTS ---- //
 import { HeaderLinks } from "../../../reusableComponents/Links/Links";
 import { Row, RowIcon } from "../../../reusableComponents/TitledIcon/TitledIcon";
@@ -14,17 +18,20 @@ const Details = () => {
   return (
     <Row>
       <List>
-        <li>
+        <li className="new">
           {" "}
           <HeaderLinks to="">new in</HeaderLinks>
+          {/* <NewInDrop /> */}
         </li>
         <li>
           {" "}
           <HeaderLinks to="">must have</HeaderLinks>
+          {/* <MustHaveDrop /> */}
         </li>
         <li>
           {" "}
           <HeaderLinks to="">trend</HeaderLinks>
+          {/* <TrendDrop /> */}
         </li>
         <li>
           {" "}

@@ -9,6 +9,7 @@ export const Input = styled.input`
   padding: 14px 0;
   padding-left: 20px;
   width: 100%;
+  position: relative;
 `;
 export const InputWrapper = styled.div`
   position: relative;

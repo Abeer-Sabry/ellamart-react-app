@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { glowColor } from "../../../constants";
+import { glowColor } from "../../constants/index";
 
 export const CoverWrapper = styled.div`
   background-image: url("https://cdn.shopify.com/s/files/1/0064/4435/1539/files/slider-supermarket-1_8e7ff03d-fe3d-48e3-a8ce-0af729b9d4b1.jpg?v=1638361692");

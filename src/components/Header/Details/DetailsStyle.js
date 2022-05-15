@@ -6,10 +6,30 @@ export const List = styled.ul`
   justify-content: space-between;
   li {
     margin-right: 40px;
+    .dropdown {
+      content: "";
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      background-color: yellow;
+      display: none;
+    }
     a {
       font-weight: 600;
+      /* &:hover {
+        .dropdown {
+          display: block;
+        }
+      } */
     }
   }
+  /* li.new {
+    &:hover {
+      .dropdown {
+        display: block;
+      }
+    }
+  } */
 `;
 export const CustomerNeed = styled.div`
   display: flex;

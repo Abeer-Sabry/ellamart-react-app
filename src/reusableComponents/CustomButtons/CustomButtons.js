@@ -19,15 +19,6 @@ export const Button = styled(Link)`
     color: ${darkBlue};
   }
 `;
-export const CustomButton = styled(Button)`
-  background-color: ${darkBlue};
-  border: 1px solid ${darkBlue};
-  color: white;
-  &:hover {
-    border: 1px solid ${darkGray};
-    color: ${darkGray};
-  }
-`;
 
 export const OptionButton = styled(Button)`
   display: inline-block;
@@ -38,5 +29,21 @@ export const OptionButton = styled(Button)`
     border: 1px solid ${lightBlue};
     background-color: ${lightBlue};
     color: white;
+  }
+`;
+export const CustomButton = styled.button`
+  background-color: ${darkBlue};
+  border: 1px solid ${darkBlue};
+  color: white;
+  padding: 7px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: ease 0.4s;
+  &:hover {
+    border: 1px solid ${darkGray};
+    color: ${darkGray};
+    background-color: white;
   }
 `;

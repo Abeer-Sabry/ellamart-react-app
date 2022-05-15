@@ -5,6 +5,9 @@ import { darkBlue, darkerGray } from "../../../constants";
 export const Wrapper = styled.div`
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
   a {
     display: flex;
