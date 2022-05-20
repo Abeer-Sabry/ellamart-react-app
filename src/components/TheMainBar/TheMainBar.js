@@ -1,9 +1,20 @@
 import React from "react";
+// ----- AND-DESIGN ----- //
 import { Select, Breadcrumb } from "antd";
+// ----- STYLED-COMPONENT ----- //
 import { SelectWrapper, BarWrapper } from "./TheMainBarStyle";
+// ----- REACT-ICONS ----- //
 import { FaTh, FaThList } from "react-icons/fa";
+// ----- REDUX AND ACTIONS ----- //
+import { gridViewAction, listViewAction } from "../../Redux/fetchProduct/fetchProductSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 const { Option } = Select;
+
 const TheMainBar = () => {
+  const dispatch = useDispatch();
+  const { productView } = useSelector(state => state.products);
+
   return (
     <BarWrapper>
       <Breadcrumb>
@@ -37,10 +48,16 @@ const TheMainBar = () => {
           </Select>
         </div>
         <div className="icons">
-          <span>
+          <span
+            onClick={() => dispatch(gridViewAction())}
+            style={{ color: `${productView ? "grey" : "black"}` }}
+          >
             <FaTh />
           </span>
-          <span>
+          <span
+            onClick={() => dispatch(listViewAction())}
+            style={{ color: `${!productView ? "grey" : "black"}` }}
+          >
             <FaThList />
           </span>
         </div>

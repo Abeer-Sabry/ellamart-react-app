@@ -21,7 +21,9 @@ const Details = () => {
         <li className="new">
           {" "}
           <HeaderLinks to="">new in</HeaderLinks>
-          {/* <NewInDrop /> */}
+          <div className="dropNew">
+            <NewInDrop />
+          </div>
         </li>
         <li>
           {" "}

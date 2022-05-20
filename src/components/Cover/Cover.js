@@ -12,7 +12,7 @@ const Cover = () => {
           <span>Huge Saving on</span> <br /> UHD Televisions{" "}
         </h1>
         <p>Sale up to 70% off on selected items* </p>
-        <Button to="/">shop now</Button>
+        <Button to="/collections/new-in">shop now</Button>
       </div>
     </CoverWrapper>
   );

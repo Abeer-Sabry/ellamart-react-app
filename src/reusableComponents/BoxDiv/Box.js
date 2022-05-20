@@ -8,7 +8,15 @@ export const Box = styled.span`
   border: 1px solid ${Gray};
   color: ${darkerGray};
   margin-right: 10px;
-  width: 45px;
   text-align: center;
   font-size: 14px;
+`;
+export const SizeFrame = styled(Box)`
+  font-size: 18px;
+  padding: 5px 30px;
+  text-align: center;
+  width: 80px;
+  &.active {
+    background-color: ${Gray};
+  }
 `;

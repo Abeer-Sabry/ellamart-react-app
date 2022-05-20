@@ -12,13 +12,13 @@ import SingleProductModel from "./ProductModel/ProductModel";
 const FetchProducts = () => {
   // REDUX
   const dispatch = useDispatch();
-  const { products, loading } = useSelector(state => state.products);
+  const { products, loading, productView } = useSelector(state => state.products);
 
   useEffect(() => {
     dispatch(fetchProductsAsync());
   }, [dispatch]);
   return (
-    <Wrapper>
+    <Wrapper view={productView}>
       {products.map(product => (
         <>
           <ProductItem {...product} />

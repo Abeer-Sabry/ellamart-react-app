@@ -4,7 +4,7 @@ import { darkerGray, Gray, lightGray } from "../../constants/index";
 export const MainContent = styled.div`
   display: grid;
   grid-template-columns: 2fr 10fr;
-  grid-column-gap: 30px;
+  grid-column-gap: 50px;
 `;
 
 export const ProductsWrapper = styled.div`
