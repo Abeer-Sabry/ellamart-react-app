@@ -1,9 +1,9 @@
 // ----- COMPONENTS ----- //
 import Description from "./Description/Description";
-// ----- ICONS ----- //
-import { FaClipboardList, FaTruck, FaCertificate } from "react-icons/fa";
 import Shipping from "./Shipping/Shipping";
 import CustomProduct from "./CustomProduct/CustomProduct";
+// ----- ICONS ----- //
+import { FaClipboardList, FaTruck, FaCertificate } from "react-icons/fa";
 
 const tabs = [
   {

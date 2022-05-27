@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
 `;
 export const Content = styled.div`
   text-align: center;
@@ -15,6 +18,6 @@ export const Content = styled.div`
   h2 {
     font-size: 36px;
     margin-bottom: 7px;
-    /* color: white; */
+    color: white;
   }
 `;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+// ----- CONSTANTS-COLORS ----- //
 import { Gray } from "../../constants";
 
 export const BarWrapper = styled.div`
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 4fr 8fr;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;

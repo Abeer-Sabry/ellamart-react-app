@@ -19,6 +19,7 @@ import { BsArrowRight, BsArrowLeft, BsSuitHeart, BsShare } from "react-icons/bs"
 import { formatPrice } from "../../helpers/index";
 // ----- ANT-DESIGN ----- //
 import { Checkbox } from "antd";
+import { Link } from "react-router-dom";
 
 const ProductLayout = props => {
   const {
@@ -42,8 +43,13 @@ const ProductLayout = props => {
 
   const [activeSize, setActiveSize] = useState(sizes ? sizes[0] : []);
   const [activeColor, setActiveColor] = useState(colors ? colors[0] : []);
+  const [disable, setDisable] = useState(false);
   console.log("size", sizes);
   console.log("colors", colors);
+  // ----- CheckBox-Change-FUNC
+  const onChangeHandler = () => {
+    setDisable(!disable);
+  };
   return (
     <Wrapper>
       <ImageGallery items={images} />
@@ -126,8 +132,10 @@ const ProductLayout = props => {
             <BsShare />
           </span>
         </ButtonsWrapper>
-        <Checkbox>I agree with the Terms & conditions </Checkbox>
-        <button className="buyBtn">Buy it now</button>
+        <Checkbox onChange={onChangeHandler}>I agree with the Terms & conditions </Checkbox>
+        <Link to="" disabled={!disable} className={`${disable ? "active" : ""}    buyBtn`}>
+          Buy it now
+        </Link>
       </div>
     </Wrapper>
   );

@@ -1,23 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 // ----- COMPONENTS ----- //
 import NewInCover from "../../components/NewInCover/NewInCover";
+import ResponsiveNewInCover from "../../components/NewInCover/ResponsiveNewInCover/ResponsiveNewInCover";
+import TheMainBar from "../../components/TheMainBar/TheMainBar";
 import MainFilterBar from "../../components/FilterationBar/MainFilterBar/MainFilterBar";
 // ----- STYLED-COMPONENTS ----- //
 import {
   Brands,
   LogoWrapper,
   MainContent,
-  ProductsWrapper,
+  // ProductsWrapper,
   Paragraph,
 } from "./ProductsCollectionsStyle";
 // ----- DATA ----- //
 import { logos } from "./logos";
+// ----- CONSTANTS ----- //
 import { CustomContainer } from "../../constants";
+// ----- REDUX-ACTIONS----- //
 import FetchProducts from "../../components/FetchProducts/FetchProducts";
-import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
-import { useDispatch, useSelector } from "react-redux";
-import ProductItem from "../../components/FetchProducts/ProductItem/ProductItem";
-import TheMainBar from "../../components/TheMainBar/TheMainBar";
+// import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import ProductItem from "../../components/FetchProducts/ProductItem/ProductItem";
 
 const ProductsCollections = () => {
   // REDUX
@@ -30,6 +33,7 @@ const ProductsCollections = () => {
   return (
     <CustomContainer>
       <NewInCover />
+      <ResponsiveNewInCover />
       <TheMainBar />
       {/* ----- THE SIDE-BAR && PRODUCTS -SECTION ----- */}
       <MainContent>

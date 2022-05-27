@@ -19,4 +19,7 @@ export const SizeFrame = styled(Box)`
   &.active {
     background-color: ${Gray};
   }
+  @media only screen and (max-width: 1046px) {
+    margin-bottom: 12px;
+  }
 `;

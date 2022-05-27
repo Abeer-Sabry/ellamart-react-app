@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// ----- CONSTANTS-COLORS ----- //
 import { glowColor } from "../../constants/index";
 
 export const CoverWrapper = styled.div`

@@ -3,17 +3,21 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // ----- COMPONENTS ----- //
 import ProductLayout from "../../components/ProductLayout/ProductLayout";
+// -----REUSABLE -COMPONENTS ----- //
+import ProductCarousel from "../../reusableComponents/ProductCarousel/ProductCarousel";
 // ----- TABS ----- //
 import tabs from "../../components/TabSection/Tabs";
 // ----- STYLED-COMPONENTS ----- //
-import { CustomerCareWrapper, TabTitle } from "./SingleProductStyle";
+import { CustomerCareWrapper, TabDiv, TabTitle } from "./SingleProductStyle";
 // ----- CONSTANTS ----- //
 import { CustomContainer } from "../../constants";
 // ----- REDUX AND ACTIONS ----- //
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductDetailsAsync } from "../../Redux/FetchSingleProduct/SingleProductSlice";
-import ProductCarousel from "../../reusableComponents/ProductCarousel/ProductCarousel";
 import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
+// ----- ANT DESIGN ----- //
+import { Breadcrumb } from "antd";
+import ResponsiveTab from "../../components/TabSection/ResponsiveTabSection/ResponsiveTab";
 
 const SingleProduct = () => {
   const { singleProduct, loading } = useSelector(state => state.singleProduct);
@@ -31,6 +35,11 @@ const SingleProduct = () => {
   return (
     <>
       <CustomContainer>
+        <Breadcrumb style={{ marginTop: "30px" }}>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item> New In</Breadcrumb.Item>
+          <Breadcrumb.Item>{title}</Breadcrumb.Item>
+        </Breadcrumb>
         <ProductLayout
           images={singleProduct?.images ? singleProduct.images : []}
           title={singleProduct.title}
@@ -85,10 +94,18 @@ const SingleProduct = () => {
         </CustomContainer>
       </TabTitle>
       <CustomContainer>
-        {tabs.map(
-          ({ name, component }, index) => activeTab === name && <div key={index}>{component}</div>
-        )}
+        <TabDiv>
+          {tabs.map(
+            ({ name, component }, index) =>
+              activeTab === name && (
+                <div className="tabDiv" key={index}>
+                  {component}
+                </div>
+              )
+          )}
+        </TabDiv>
         {/* ----- /TABS-SECTION ----- */}
+        <ResponsiveTab />
         {/* ----- RELATED-PRODUCT-CAROUSEL-SECTION ----- */}
         {products.map(product => (
           <ProductCarousel key={product.id} title={product.title} />

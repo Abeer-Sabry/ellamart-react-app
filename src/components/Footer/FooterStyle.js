@@ -11,10 +11,24 @@ export const Wrapper = styled.div`
     font-weight: 800;
     text-transform: capitalize;
     margin-bottom: 5px;
+    /* Responsive  */
+    @media only screen and (max-width: 435px) {
+      font-size: 15px;
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 14px;
+    }
   }
   p {
     color: ${darkGray};
     margin-bottom: 25px;
+    /* Responsive  */
+    @media only screen and (max-width: 435px) {
+      font-size: 12px;
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 10px;
+    }
   }
   form {
     display: flex;
@@ -26,6 +40,18 @@ export const Wrapper = styled.div`
       width: 30%;
       margin-right: 15px;
       border: 1px solid ${Gray};
+    }
+    @media only screen and (max-width: 801px) {
+      flex-direction: column;
+      input {
+        width: 70%;
+        margin-bottom: 15px;
+      }
+    }
+    @media only screen and (max-width: 465px) {
+      button {
+        font-size: 14px;
+      }
     }
   }
   .content {
@@ -40,6 +66,10 @@ export const Wrapper = styled.div`
       display: block;
       width: fit-content;
       margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 801px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 25px;
     }
   }
 `;
@@ -65,8 +95,14 @@ export const SocialIcons = styled.div`
     height: 35px;
     border-radius: 50%;
     text-align: center;
-    line-height: 37px;
+    line-height: 40px;
     margin-right: 7px;
+    @media only screen and (max-width: 1050px) {
+      width: 25px !important;
+      height: 25px;
+      line-height: 30px;
+      font-size: 12px;
+    }
   }
 `;
 export const FooterAd = styled.div`
@@ -74,6 +110,9 @@ export const FooterAd = styled.div`
   margin-top: 40px;
   img {
     width: 35%;
+    @media only screen and (max-width: 800px) {
+      width: 80%;
+    }
   }
 `;
 export const CopyRight = styled.div`
