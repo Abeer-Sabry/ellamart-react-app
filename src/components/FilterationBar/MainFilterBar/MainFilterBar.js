@@ -20,6 +20,7 @@ import { OptionButton } from "../../../reusableComponents/CustomButtons/CustomBu
 import { CategoryDiv } from "../../../reusableComponents/CategoryDiv/CategoryDiv";
 // ---- REACT-ICONS ---- //
 import { BsCheck } from "react-icons/bs";
+import { IoMdClose } from "react-icons/io";
 // ---- ANT-DESIGN ---- //
 // import "antd/dist/antd.css";
 import { Checkbox } from "antd";
@@ -68,6 +69,9 @@ const MainFilterBar = () => {
 
   return (
     <Wrapper>
+      <span className="closeIcon">
+        <IoMdClose />
+      </span>
       <Section>
         <h4>Categories</h4>
         <List>
@@ -180,10 +184,13 @@ const MainFilterBar = () => {
       <CustomBlock>
         <h4>Custom Block CMS</h4>
         <p className="paragraph1">
-          Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html,
-          images, media... or whatever you like.
+          Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content
+          here: text, html, images, media... or whatever you like.
         </p>
-        <p>There are many similar sample content placeholders across the store. All editable from Theme Editor.</p>
+        <p>
+          There are many similar sample content placeholders across the store. All editable from
+          Theme Editor.
+        </p>
       </CustomBlock>
     </Wrapper>
   );

@@ -111,5 +111,13 @@ export const ItemWrapper = styled.div`
         color: white;
       }
     }
+    @media only screen and (max-width: 720px) {
+      text-align: center;
+      .divCart {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 `;

@@ -9,6 +9,30 @@ export const Wrapper = styled.div`
     font-weight: 800;
     letter-spacing: 1.3px;
   }
+  .closeIcon {
+    display: none;
+  }
+  @media only screen and (max-width: 992px) {
+    display: none;
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 230px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 50px 30px;
+    background-color: yellow;
+    .closeIcon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
 `;
 export const Section = styled.div`
   padding-bottom: 25px;

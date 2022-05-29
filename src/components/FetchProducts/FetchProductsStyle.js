@@ -5,4 +5,15 @@ export const Wrapper = styled.div`
   grid-column-gap: ${props => (props.view ? "40px" : "0px")};
   grid-row-gap: ${props => (props.view ? "40px" : "0px")};
   margin-bottom: ${props => (props.view ? "40px" : "0px")};
+
+  /* ----- Responsive ----- */
+  @media only screen and (max-width: 1345px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (max-width: 917px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 720px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;

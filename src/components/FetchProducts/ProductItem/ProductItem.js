@@ -43,20 +43,20 @@ const ProductItem = product => {
   const newPrice = price - percentage;
   // ---- /PERCENTAGE-AMOUNT ---- //
 
-  const ratingStars = Array.from({ length: 5 }, (_, index) => {
-    const number = index + 0.5;
-    return (
-      <span key={index}>
-        {rating >= index + 1 ? (
-          <AiFillStar />
-        ) : rating >= number ? (
-          <FaStarHalfAlt />
-        ) : (
-          <AiOutlineStar />
-        )}
-      </span>
-    );
-  });
+  // const ratingStars = Array.from({ length: 5 }, (_, index) => {
+  //   const number = index + 0.5;
+  //   return (
+  //     <span key={index}>
+  //       {rating >= index + 1 ? (
+  //         <AiFillStar />
+  //       ) : rating >= number ? (
+  //         <FaStarHalfAlt />
+  //       ) : (
+  //         <AiOutlineStar />
+  //       )}
+  //     </span>
+  //   );
+  // });
 
   return (
     <>
@@ -99,7 +99,9 @@ const ProductItem = product => {
             ))}
           </div>
 
-          <button className="cartBtn">add to cart</button>
+          <div className="divCart">
+            <button className="cartBtn">add to cart</button>
+          </div>
         </div>
       </ItemWrapper>
 

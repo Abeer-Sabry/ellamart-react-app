@@ -18,6 +18,7 @@ import { logos } from "./logos";
 import { CustomContainer } from "../../constants";
 // ----- REDUX-ACTIONS----- //
 import FetchProducts from "../../components/FetchProducts/FetchProducts";
+import ResponsiveFilterBar from "../../components/FilterationBar/ResponsiveFilterBar/ResponsiveFilterBar";
 // import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
 // import { useDispatch, useSelector } from "react-redux";
 // import ProductItem from "../../components/FetchProducts/ProductItem/ProductItem";
@@ -34,10 +35,13 @@ const ProductsCollections = () => {
     <CustomContainer>
       <NewInCover />
       <ResponsiveNewInCover />
+      {/* ----- THE-MAIN-UPPER-BAR ----- */}
       <TheMainBar />
+
       {/* ----- THE SIDE-BAR && PRODUCTS -SECTION ----- */}
       <MainContent>
         <MainFilterBar />
+        {/* <ResponsiveFilterBar /> */}
         {/* <ProductsWrapper>
           {products.map(product => (
             <>
