@@ -8,19 +8,32 @@ export const Wrapper = styled.div`
 `;
 export const ImgRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
   grid-gap: 30px;
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden; */
   transition: ease 0.4s;
+
+  .img1 {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+  .img2 {
+    grid-row: 1;
+    grid-column: 4/8;
+  }
+  .img3 {
+    grid-row: 1;
+    grid-column: 8/12;
+  }
   .img4 {
-    grid-column: 1/3;
     grid-row: 2;
+    grid-column: 1/6;
   }
   .img5 {
-    grid-column: 3/5;
     grid-row: 2;
+    grid-column: 6/12;
   }
   div {
     overflow: hidden;

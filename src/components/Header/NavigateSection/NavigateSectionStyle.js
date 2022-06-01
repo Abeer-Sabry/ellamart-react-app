@@ -12,11 +12,13 @@ export const Wrapper = styled.div`
   img {
     width: 180px;
   }
+  @media only screen and (max-width: 1405px) {
+    grid-template-columns: 3fr 4fr 5fr;
+  }
 `;
 export const DetailsWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  /* justify-content: space-between; */
   align-items: center;
   div {
     margin-left: 40px;
@@ -28,14 +30,34 @@ export const DetailsWrapper = styled.div`
       font-weight: 400;
       font-size: 14px;
     }
+    h3 {
+      color: white;
+    }
+    @media only screen and (max-width: 1435px) {
+      span {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+    }
   }
   svg {
     font-size: 27px;
     color: ${lightYellow};
+    @media only screen and (max-width: 1468px) {
+      font-size: 24px;
+    }
+    @media only screen and (max-width: 1435px) {
+      font-size: 20px;
+    }
   }
   p {
     color: white;
     text-transform: capitalize;
     font-size: 14px;
+    @media only screen and (max-width: 1468px) {
+      font-size: 13px;
+    }
   }
 `;

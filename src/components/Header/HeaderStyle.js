@@ -7,4 +7,7 @@ export const HeaderWrapper = styled.div`
   padding-top: 30px;
   padding-bottom: 20px;
   position: relative;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
