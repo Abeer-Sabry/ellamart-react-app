@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Gray } from "../../../../../constants";
 
-export const MainWrapper = styled.div`
+export const TrendWrapper = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
@@ -10,6 +10,9 @@ export const MainWrapper = styled.div`
   grid-template-columns: repeat(5, 1fr);
   height: 460px;
   overflow-y: scroll;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s all ease;
   img {
     height: 250px;
   }

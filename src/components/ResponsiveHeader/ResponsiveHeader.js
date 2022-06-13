@@ -17,9 +17,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getNavContentAsync } from "../../Redux/FetchNavContent/NavContentSlice";
 
 const ResponsiveHeader = () => {
-  // --- Responsible for opening sideNav //
+  // --- Responsible for opening and Closing sideNav //
   const [openBar, setOpenBar] = useState(false);
-  // --- Responsible for Nav Content //
+  // --- Responsible for SideNavContent //
   const { entryStore } = useSelector(state => state.navContent);
   const dispatch = useDispatch();
 
@@ -52,15 +52,7 @@ const ResponsiveHeader = () => {
             <>
               <SideBar state={state} />
               <OverlayDiv onClick={() => setOpenBar(false)} />
-              <CloseNav
-                style={
-                  state === "entering"
-                    ? { animation: "show 0.3s forwards" }
-                    : state === "entered"
-                    ? { opacity: "1" }
-                    : { animation: "show 0.3s reverse forwards" }
-                }
-              >
+              <CloseNav>
                 <IoCloseSharp
                   style={
                     state === "entering"

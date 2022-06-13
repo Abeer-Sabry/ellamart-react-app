@@ -1,13 +1,13 @@
 import React from "react";
 // ----- STYLED-COMPONENT ----- //
-import { MainWrapper, LinksWrapper, List } from "./NewInStyle";
+import { LinksWrapper, List, NewInWrapper } from "./NewInStyle";
 // ----- REUSABLE-COMPONENTs ----- //
 import { DropDownTitle } from "../../../../../reusableComponents/CategoryDiv/CategoryDiv";
 import { DropLinks } from "../../../../../reusableComponents/SubLinks/SubLinks";
 
 const NewInDrop = () => {
   return (
-    <MainWrapper>
+    <NewInWrapper>
       <LinksWrapper>
         <div>
           <DropDownTitle>What’s New</DropDownTitle>
@@ -133,7 +133,7 @@ const NewInDrop = () => {
           </List>
         </div>
       </LinksWrapper>
-    </MainWrapper>
+    </NewInWrapper>
   );
 };
 

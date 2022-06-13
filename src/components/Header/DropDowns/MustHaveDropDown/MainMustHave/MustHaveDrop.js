@@ -1,13 +1,13 @@
 import React from "react";
 // ----- STYLED-COMPONENT ----- //
-import { MainWrapper, LinksWrapper, List, ProductWrapper } from "./MustHaveStyle";
+import { MustWrapper, LinksWrapper, List, ProductWrapper } from "./MustHaveStyle";
 // ----- REUSABLE-COMPONENTs ----- //
 import { DropDownTitle } from "../../../../../reusableComponents/CategoryDiv/CategoryDiv";
 import { DropLinks } from "../../../../../reusableComponents/SubLinks/SubLinks";
 
 const MustHaveDrop = () => {
   return (
-    <MainWrapper>
+    <MustWrapper>
       <LinksWrapper>
         <div>
           <DropDownTitle>What’s New</DropDownTitle>
@@ -124,10 +124,16 @@ const MustHaveDrop = () => {
         </List>
       </LinksWrapper>
       <ProductWrapper>
-        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/mega-image-2.jpg?v=1617417603" alt="" />
-        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/mega-image-3.jpg?v=1617417612" alt="" />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/mega-image-2.jpg?v=1617417603"
+          alt=""
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/mega-image-3.jpg?v=1617417612"
+          alt=""
+        />
       </ProductWrapper>
-    </MainWrapper>
+    </MustWrapper>
   );
 };
 

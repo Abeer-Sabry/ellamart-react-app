@@ -1,24 +1,14 @@
 import styled from "styled-components";
-// ----- CONSTANTS ----- //
-import { darkerGray, lightGray } from "../../../../constants";
+import { lightBlue, lightGray } from "../../../../constants";
 
-export const SideRowWrapper = styled.div`
+export const SideRowWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  cursor: pointer;
-  padding: 15px 0;
-  padding-left: 20px;
-  padding-right: 20px;
-
+  padding: 10px 15px;
   &:hover {
     background-color: ${lightGray};
-    svg {
-      color: ${darkerGray};
+    p {
+      color: ${lightBlue};
     }
-  }
-  svg {
-    color: grey;
-    font-size: 15px;
   }
 `;

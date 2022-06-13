@@ -1,6 +1,7 @@
 import React from "react";
 // ---- REDUX ---- //
 import { useDispatch, useSelector } from "react-redux";
+import { closeModal } from "../../../Redux/ProductQuickModel/ProductModelSlice";
 // ---- ANT-DESIGN ---- //
 // import { Modal, Button } from "antd";
 // ---- STYLED-COMPONENT ---- //
@@ -20,6 +21,7 @@ const ProductModel = () => {
             <div>
               <p>{singleProduct.title}</p>
             </div>
+            <span onClick={() => dispatch(closeModal())}>close</span>
           </DivModal>
         </Wrapper>
       ) : null}

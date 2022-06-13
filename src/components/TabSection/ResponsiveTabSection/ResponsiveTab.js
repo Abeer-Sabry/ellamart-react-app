@@ -6,7 +6,7 @@ import Shipping from "../Shipping/Shipping";
 // ----- STYLED-COMPONENT ----- //
 import { Wrapper } from "./ResponsiveTabStyle";
 // ----- REACT-ICONS ----- //
-import { FaClipboardList, FaTruck, FaCertificate } from "react-icons/fa";
+import { FaClipboardList } from "react-icons/fa";
 // ----- ANT-DESIGN ----- //
 import { Tabs } from "antd";
 const { TabPane } = Tabs;

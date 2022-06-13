@@ -14,7 +14,6 @@ import {
   AdContainer,
 } from "./MainBarStyle";
 // ---- REUSEABLE-COMPONENTS ---- //
-import { DropLinks } from "../../../reusableComponents/SubLinks/SubLinks";
 import { Box } from "../../../reusableComponents/BoxDiv/Box";
 import { OptionButton } from "../../../reusableComponents/CustomButtons/CustomButtons";
 import { CategoryDiv } from "../../../reusableComponents/CategoryDiv/CategoryDiv";

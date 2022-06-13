@@ -9,8 +9,12 @@ const productModel = createSlice({
       state.showModel = true;
       console.log(state.singleProduct);
     },
+    closeModal: (state, action) => {
+      state.showModel = false;
+      console.log(state.singleProduct);
+    },
   },
 });
 
-export const { getSingleProduct } = productModel.actions;
+export const { getSingleProduct, closeModal } = productModel.actions;
 export default productModel.reducer;

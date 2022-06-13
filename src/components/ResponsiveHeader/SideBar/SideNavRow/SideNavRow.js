@@ -1,35 +1,17 @@
-import React, { useState } from "react";
-// ----- STYLED-COMPONENT ----- //
-import { SideRowWrapper } from "./SideNavRowStyle";
-// ----- REACT-ICONS ----- //
+import React from "react";
+// ---- STYLED-COMPONENT ---- //
+import { SideRowWrap } from "./SideNavRowStyle";
+
 import { IoIosArrowForward } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
-import { subContainerOpen } from "../../../../Redux/FetchNavContent/NavContentSlice";
 
 const SideNavRow = props => {
-  // ---- Responsible for sub content data
-  const [subContainerEntries, setSubContainerEntries] = useState([]);
-  // ---- Responsible for open subContainer
-  const { subContainer } = useSelector(state => state.navContent);
-  const dispatch = useDispatch();
-
-  // const openNav = () => {
-  //   setSubContainerEntries(props.entries);
-  //   setSubContainer(true);
-  // };
-
   return (
-    <SideRowWrapper
-      onClick={() => {
-        props.entries && setSubContainerEntries(props.entries);
-        dispatch(subContainerOpen());
-      }}
-    >
-      <div>{props.text}</div>
+    <SideRowWrap onClick={props.onClick}>
+      <p>{props.text}</p>
       <span>
         <IoIosArrowForward />
       </span>
-    </SideRowWrapper>
+    </SideRowWrap>
   );
 };
 

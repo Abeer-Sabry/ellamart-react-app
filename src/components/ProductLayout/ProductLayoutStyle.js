@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darkerGray, darkGray, Gray, lightBlue, Red } from "../../constants";
+import { darkGray, Gray, lightBlue, Red } from "../../constants";
 
 export const Wrapper = styled.div`
   display: grid;
@@ -129,6 +129,7 @@ export const Arrows = styled.div`
     display: none;
   }
 `;
+// Review and rating div
 export const ReviewDiv = styled.div`
   display: flex;
   margin-bottom: 20px;
@@ -139,6 +140,7 @@ export const ReviewDiv = styled.div`
     color: ${darkGray};
   }
 `;
+// Favorite buttons style
 export const FlexDiv = styled.div`
   display: flex;
   align-items: center;
@@ -151,6 +153,7 @@ export const FlexDiv = styled.div`
     font-size: 14px;
   }
 `;
+// ---- colors circles style
 export const ColorsWrapper = styled.div`
   margin: 20px 0;
   .colorName {
@@ -166,11 +169,13 @@ export const ColorsWrapper = styled.div`
     height: 29px;
     border-radius: 50%;
     margin-right: 7px;
+    cursor: pointer;
     &.active {
-      border: 1px solid pink;
+      border: 1px solid ${Red};
     }
   }
 `;
+// ---- quantity and cartButton
 export const ButtonsWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 7fr 1fr 1fr;
@@ -180,6 +185,7 @@ export const ButtonsWrapper = styled.div`
 
   span {
     text-align: center;
+    cursor: pointer;
     :nth-child(1) {
       border: 1px solid ${Gray};
       border-radius: 50px;
@@ -230,6 +236,7 @@ export const ButtonsWrapper = styled.div`
     border-radius: 50px;
     padding: 23px 0;
     color: white;
+    cursor: pointer;
     @media only screen and (max-width: 800px) {
       grid-row: 2;
       grid-column: 1/6;

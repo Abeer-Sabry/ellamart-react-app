@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darkGray, Gray, lightYellow } from "../../../constants/index";
+import { darkGray } from "../../../constants/index";
 export const Wrapper = styled.div`
   display: none;
   /* Content */

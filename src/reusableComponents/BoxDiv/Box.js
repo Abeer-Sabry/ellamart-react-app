@@ -16,6 +16,7 @@ export const SizeFrame = styled(Box)`
   padding: 5px 30px;
   text-align: center;
   width: 80px;
+  cursor: pointer;
   &.active {
     background-color: ${Gray};
   }

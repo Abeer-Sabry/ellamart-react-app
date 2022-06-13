@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // ----- COMPONENTS ----- //
 import ProductLayout from "../../components/ProductLayout/ProductLayout";
+import ResponsiveTab from "../../components/TabSection/ResponsiveTabSection/ResponsiveTab";
 // -----REUSABLE -COMPONENTS ----- //
 import ProductCarousel from "../../reusableComponents/ProductCarousel/ProductCarousel";
+import { OptionButton } from "../../reusableComponents/CustomButtons/CustomButtons";
 // ----- TABS ----- //
 import tabs from "../../components/TabSection/Tabs";
 // ----- STYLED-COMPONENTS ----- //
@@ -17,10 +19,9 @@ import { fetchProductDetailsAsync } from "../../Redux/FetchSingleProduct/SingleP
 import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
 // ----- ANT DESIGN ----- //
 import { Breadcrumb } from "antd";
-import ResponsiveTab from "../../components/TabSection/ResponsiveTabSection/ResponsiveTab";
 
 const SingleProduct = () => {
-  const { singleProduct, loading } = useSelector(state => state.singleProduct);
+  const { singleProduct } = useSelector(state => state.singleProduct);
   const { products } = useSelector(state => state.products);
   console.log("products", products);
   const { title } = useParams();
@@ -32,6 +33,7 @@ const SingleProduct = () => {
   }, [dispatch, title]);
   // ---TABS-STATE
   const [activeTab, setActiveTab] = useState("Description");
+
   return (
     <>
       <CustomContainer>
@@ -106,10 +108,17 @@ const SingleProduct = () => {
         </TabDiv>
         {/* ----- /TABS-SECTION ----- */}
         <ResponsiveTab />
+
         {/* ----- RELATED-PRODUCT-CAROUSEL-SECTION ----- */}
-        {products.map(product => (
-          <ProductCarousel key={product.id} title={product.title} />
-        ))}
+        <ProductCarousel
+          items={products?.map(product => (
+            <div>
+              <img src={product?.img[0]["mainImg"]} alt="" />
+              <p>{product?.title}</p>
+              <OptionButton to="">select options</OptionButton>
+            </div>
+          ))}
+        />
         {/* ----- /RELATED-PRODUCT-CAROUSEL-SECTION ----- */}
       </CustomContainer>
     </>

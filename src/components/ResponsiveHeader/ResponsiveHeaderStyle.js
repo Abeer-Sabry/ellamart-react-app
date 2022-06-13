@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { darkBlue } from "../../constants";
 
 export const ResHeaderWrap = styled.div`
   display: none;
@@ -12,7 +11,6 @@ export const ResHeaderWrap = styled.div`
     padding: 10px 0;
     width: 100%;
   }
-
   div.logoImg {
     display: flex;
     justify-content: center;
@@ -28,6 +26,19 @@ export const ResHeaderWrap = styled.div`
   }
   @media only screen and (max-width: 1200px) {
     display: block;
+  }
+  @media only screen and (max-width: 475px) {
+    grid-template-columns: 4fr 4fr 4fr;
+    div.logoImg {
+      img {
+        width: 120px;
+      }
+    }
+    .cart {
+      div {
+        width: 12px;
+      }
+    }
   }
 `;
 export const OverlayDiv = styled.div`
@@ -57,7 +68,7 @@ export const CloseNav = styled.div`
   color: white;
   z-index: 75;
 
-  /* --- Animation-Expand-The-Existence-SideBar-OutWards --- */
+  /* --- Animation-Responsible-For-OverlayDiv-and-CloseIcon  --- */
   @keyframes show {
     0% {
       opacity: 0;

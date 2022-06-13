@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // ----- CONSTANTS-COLORS ----- //
-import { darkGray, Gray, lightBlue, lightYellow, Red } from "../../../constants";
-import { AiFillStar } from "react-icons/ai";
+import { darkGray, lightBlue, lightYellow, Red } from "../../../constants";
+
 export const ItemWrapper = styled.div`
   display: ${props => (props.view ? "block" : "grid")};
   grid-template-columns: 5fr 7fr;

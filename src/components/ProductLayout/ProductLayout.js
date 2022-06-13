@@ -41,10 +41,10 @@ const ProductLayout = props => {
   const newPrice = price - percentage;
   // ---- /PRICE-PERCENTAGE
 
-  const [activeSize, setActiveSize] = useState(sizes ? sizes[0] : []);
-  const [activeColor, setActiveColor] = useState(colors ? colors[0] : []);
+  const [activeSize, setActiveSize] = useState(0);
+  const [activeColor, setActiveColor] = useState(0);
   const [disable, setDisable] = useState(false);
-  console.log("size", sizes);
+  console.log("size", activeSize);
   console.log("colors", colors);
   // ----- CheckBox-Change-FUNC
   const onChangeHandler = () => {
@@ -94,15 +94,18 @@ const ProductLayout = props => {
         <p className="des">{description}</p>
         <div>
           {sizes
-            ? sizes.map((size, index) => (
-                <SizeFrame
-                  key={index}
-                  onClick={() => setActiveSize(size)}
-                  className={size === activeSize ? "active" : ""}
-                >
-                  {size}
-                </SizeFrame>
-              ))
+            ? sizes.map((size, index) => {
+                console.log(size, activeSize);
+                return (
+                  <SizeFrame
+                    key={index}
+                    onClick={() => setActiveSize(index)}
+                    className={index === activeSize ? "active" : ""}
+                  >
+                    {size}
+                  </SizeFrame>
+                );
+              })
             : null}
         </div>
         <ColorsWrapper>
@@ -115,8 +118,8 @@ const ProductLayout = props => {
                 <span
                   key={index}
                   style={{ backgroundColor: color.hex }}
-                  className={`${activeColor === color ? "active" : ""}`}
-                  onClick={() => setActiveColor(color)}
+                  onClick={() => setActiveColor(index)}
+                  className={`${activeColor === index ? "active" : ""}`}
                 ></span>
               ))
             : null}

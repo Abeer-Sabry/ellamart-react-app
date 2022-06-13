@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home/Home";
 import ProductsCollections from "./ProductsCollections/ProductsCollections";
 import SingleProduct from "./SingleProduct/SingleProduct";
+import Cart from "./Cart/Cart";
 
 const Pages = () => {
   return (
@@ -12,6 +13,7 @@ const Pages = () => {
         <Route path="/" element={<Home />} />
         <Route path="/collections/new-in" element={<ProductsCollections />} />
         <Route path="/collections/new-in/products/:title" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );

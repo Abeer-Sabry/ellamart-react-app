@@ -7,12 +7,12 @@ import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
 import { Wrapper } from "./FetchProductsStyle";
 // ---- COMPONENT ---- //
 import ProductItem from "./ProductItem/ProductItem";
-import SingleProductModel from "./ProductModel/ProductModel";
+// import SingleProductModel from "./ProductModel/ProductModel";
 
 const FetchProducts = () => {
   // REDUX
   const dispatch = useDispatch();
-  const { products, loading, productView } = useSelector(state => state.products);
+  const { products, productView } = useSelector(state => state.products);
 
   useEffect(() => {
     dispatch(fetchProductsAsync());

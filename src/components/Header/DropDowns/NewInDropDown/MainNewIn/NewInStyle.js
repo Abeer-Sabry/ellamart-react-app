@@ -2,12 +2,14 @@ import styled from "styled-components";
 // ----- CONSTANTS-COLORS ----- //
 import { Gray } from "../../../../../constants";
 
-export const MainWrapper = styled.div`
+export const NewInWrapper = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  /* padding: 100px; */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s all ease;
 `;
 export const LinksWrapper = styled.div`
   background-color: ${Gray};

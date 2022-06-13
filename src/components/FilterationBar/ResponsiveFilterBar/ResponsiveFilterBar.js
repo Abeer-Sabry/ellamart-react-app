@@ -7,7 +7,6 @@ import { ResponsiveWrapper } from "./ResponsiveFilterBarStyle";
 const ResponsiveFilterBar = () => {
   return (
     <ResponsiveWrapper>
-      res
       <MainFilterBar />
     </ResponsiveWrapper>
   );

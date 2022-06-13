@@ -7,7 +7,7 @@ import { FaClipboardList, FaTruck, FaCertificate } from "react-icons/fa";
 
 const tabs = [
   {
-    name: "Description ",
+    name: "Description",
     component: <Description />,
     icon: <FaClipboardList />,
   },

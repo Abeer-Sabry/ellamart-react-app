@@ -21,19 +21,17 @@ const Details = () => {
         <li className="new">
           {" "}
           <HeaderLinks to="">new in</HeaderLinks>
-          <div className="dropNew">
-            <NewInDrop />
-          </div>
+          <NewInDrop />
         </li>
-        <li>
+        <li className="must">
           {" "}
           <HeaderLinks to="">must have</HeaderLinks>
-          {/* <MustHaveDrop /> */}
+          <MustHaveDrop />
         </li>
-        <li>
+        <li className="trend">
           {" "}
           <HeaderLinks to="">trend</HeaderLinks>
-          {/* <TrendDrop /> */}
+          <TrendDrop />
         </li>
         <li>
           {" "}

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   background-color: ${lightGray};
   padding: 50px 0;
   text-align: center;
-  margin-top: 60px;
+
   h2 {
     font-weight: 800;
     text-transform: capitalize;

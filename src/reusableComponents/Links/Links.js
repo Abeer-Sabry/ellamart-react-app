@@ -28,6 +28,7 @@ export const HeaderLinks = styled(NavLink)`
     }
   }
   &:hover {
+    color: white;
     :after {
       display: block;
     }
