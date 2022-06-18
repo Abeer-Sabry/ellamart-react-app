@@ -39,35 +39,37 @@ const Cart = () => {
               </CartList>
             </CartHeaderContent>
 
-            {cartItems
-              ? cartItems.map(item => {
-                  console.log(checkDiscountPercent(item));
-                  return (
-                    <ProductItemCartTable key={item.id}>
-                      <ProductThumb>
-                        <img src={item.img[0]["mainImg"]} alt={item.title} />
-                        <div>
-                          <p>{item.title}</p>
-                        </div>
-                      </ProductThumb>
-                      <ProductDetails>
-                        <div>{formatPrice(checkDiscountPercent(item))}</div>
-                        <div>
-                          {" "}
-                          <span onClick={() => dispatch(decreaseQty(item))}>
-                            <BiChevronsLeft />
-                          </span>{" "}
-                          {item.qty}
-                          <span onClick={() => dispatch(addToCart(item))}>
-                            <BiChevronsRight />
-                          </span>
-                        </div>
-                        <div>{formatPrice(item.price * item.qty)}</div>
-                      </ProductDetails>
-                    </ProductItemCartTable>
-                  );
-                })
-              : "your cart is empty"}
+            {cartItems ? (
+              cartItems.map(item => {
+                console.log(checkDiscountPercent(item));
+                return (
+                  <ProductItemCartTable key={item.id}>
+                    <ProductThumb>
+                      <img src={item.img[0]["mainImg"]} alt={item.title} />
+                      <div>
+                        <p>{item.title}</p>
+                      </div>
+                    </ProductThumb>
+                    <ProductDetails>
+                      <div>{formatPrice(checkDiscountPercent(item))}</div>
+                      <div>
+                        {" "}
+                        <span onClick={() => dispatch(decreaseQty(item))}>
+                          <BiChevronsLeft />
+                        </span>{" "}
+                        {item.qty}
+                        <span onClick={() => dispatch(addToCart(item))}>
+                          <BiChevronsRight />
+                        </span>
+                      </div>
+                      <div>{formatPrice(item.price * item.qty)}</div>
+                    </ProductDetails>
+                  </ProductItemCartTable>
+                );
+              })
+            ) : (
+              <p>your cart is empty</p>
+            )}
           </div>
           <OrderSummary>
             <h4>Order Summary </h4>

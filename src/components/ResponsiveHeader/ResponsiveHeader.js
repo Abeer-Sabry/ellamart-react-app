@@ -15,6 +15,7 @@ import { Transition } from "react-transition-group";
 // ---- REDUX AND ACTIONS ----- //
 import { useDispatch, useSelector } from "react-redux";
 import { getNavContentAsync } from "../../Redux/FetchNavContent/NavContentSlice";
+import { Link } from "react-router-dom";
 
 const ResponsiveHeader = () => {
   // --- Responsible for opening and Closing sideNav //
@@ -33,12 +34,14 @@ const ResponsiveHeader = () => {
           <span onClick={() => setOpenBar(true)}>
             <HiOutlineMenu />
           </span>
-          <div className="logoImg">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/logo-footer.png?v=1615513680"
-              alt=""
-            />
-          </div>
+          <Link to="/">
+            <div className="logoImg">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/logo-footer.png?v=1615513680"
+                alt=""
+              />
+            </div>
+          </Link>
           <span className="cart">
             <CartIcon to="/cart" />
           </span>
