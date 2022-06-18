@@ -3,49 +3,28 @@ import styled from "styled-components";
 import { darkGray, lightBlue, lightOrange } from "../../../constants";
 // ----- DROPDOWN ------ //
 import { NewInWrapper } from "../DropDowns/NewInDropDown/MainNewIn/NewInStyle";
-import { MustWrapper } from "../DropDowns/MustHaveDropDown/MainMustHave/MustHaveStyle";
-import { TrendWrapper } from "../DropDowns/TrendDropDown/MainTrendDropDown/TrendDropStyle";
-import { HeaderWrapper } from "../HeaderStyle";
+// import { MustWrapper } from "../DropDowns/MustHaveDropDown/MainMustHave/MustHaveStyle";
+// import { TrendWrapper } from "../DropDowns/TrendDropDown/MainTrendDropDown/TrendDropStyle";
+// import { HeaderWrapper } from "../HeaderStyle";
 
 export const List = styled.ul`
   display: flex;
   justify-content: space-between;
-  /* overflow: hidden; */
+
+  :nth-child(1) {
+    :hover {
+      ${NewInWrapper} {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
   li {
     margin-right: 40px;
-    /* overflow: hidden; */
+
     a {
       font-weight: 600;
-    }
-    /* Responsible for showing newIn DropDown */
-    :nth-child(1) {
-      :hover {
-        ${HeaderWrapper} {
-          overflow: visible !important;
-        }
-        ${NewInWrapper} {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-    /* Responsible for showing mustHave DropDown */
-    :nth-child(2) {
-      :hover {
-        ${MustWrapper} {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-    /* Responsible for showing trend DropDown */
-    :nth-child(3) {
-      :hover {
-        ${TrendWrapper} {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
     }
   }
 `;

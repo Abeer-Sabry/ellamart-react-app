@@ -40,7 +40,7 @@ const ResponsiveHeader = () => {
             />
           </div>
           <span className="cart">
-            <CartIcon total={"0"} />
+            <CartIcon to="/cart" />
           </span>
         </div>
       </ResHeaderWrap>

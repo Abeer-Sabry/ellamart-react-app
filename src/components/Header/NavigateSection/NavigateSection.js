@@ -9,12 +9,18 @@ import { ColumIcon } from "../../../reusableComponents/TitledIcon/TitledIcon";
 import { BiSearch } from "react-icons/bi";
 import { BsSuitHeart } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const NavigateSection = () => {
   return (
     <Wrapper>
       <div className="logo">
-        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart.png?v=1617004938" alt="" />
+        <Link to="/">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart.png?v=1617004938"
+            alt=""
+          />
+        </Link>
       </div>
       <CustomInput placeholder="Search The Store" icon={<BiSearch />} />
       <DetailsWrapper>
@@ -35,7 +41,7 @@ const NavigateSection = () => {
         </ColumIcon>
         <ColumIcon>
           <span>
-            <CartIcon total={"0"} />
+            <CartIcon to="/cart" />
           </span>
           <p>cart</p>
         </ColumIcon>

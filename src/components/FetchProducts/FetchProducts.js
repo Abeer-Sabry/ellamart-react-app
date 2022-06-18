@@ -7,7 +7,6 @@ import { fetchProductsAsync } from "../../Redux/fetchProduct/fetchProductSlice";
 import { Wrapper } from "./FetchProductsStyle";
 // ---- COMPONENT ---- //
 import ProductItem from "./ProductItem/ProductItem";
-// import SingleProductModel from "./ProductModel/ProductModel";
 
 const FetchProducts = () => {
   // REDUX

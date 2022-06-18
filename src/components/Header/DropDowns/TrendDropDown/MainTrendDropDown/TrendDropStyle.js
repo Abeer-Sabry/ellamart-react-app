@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// ---- Constants-Colors
 import { Gray } from "../../../../../constants";
 
 export const TrendWrapper = styled.div`

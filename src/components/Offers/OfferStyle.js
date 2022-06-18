@@ -11,9 +11,7 @@ export const ImgRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  /* justify-content: center;
-  align-items: center;
-  overflow: hidden; */
+
   transition: ease 0.4s;
   /* --- Responsive --- */
   @media only screen and (max-width: 991px) {
@@ -22,18 +20,7 @@ export const ImgRow = styled.div`
   @media only screen and (max-width: 501px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  /* .img1 {
-    grid-row: 1;
-    grid-column: 1/4;
-  }
-  .img2 {
-    grid-row: 1;
-    grid-column: 4/8;
-  }
-  .img3 {
-    grid-row: 1;
-    grid-column: 8/12;
-  }
+
   .img4 {
     grid-row: 2;
     grid-column: 1/6;
@@ -41,8 +28,8 @@ export const ImgRow = styled.div`
   .img5 {
     grid-row: 2;
     grid-column: 6/12;
-  } */
-  div {
+  }
+  */ div {
     overflow: hidden;
     text-align: center;
     &:hover {
@@ -53,9 +40,3 @@ export const ImgRow = styled.div`
     }
   }
 `;
-
-// export const AdImg = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   grid-column-gap: 30px;
-// `;

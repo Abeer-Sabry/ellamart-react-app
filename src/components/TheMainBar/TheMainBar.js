@@ -63,13 +63,13 @@ const TheMainBar = () => {
           <div className="icons">
             <span
               onClick={() => dispatch(gridViewAction())}
-              style={{ color: `${productView ? "grey" : "black"}` }}
+              style={{ color: `${productView ? "black" : "grey"}` }}
             >
               <FaTh />
             </span>
             <span
               onClick={() => dispatch(listViewAction())}
-              style={{ color: `${!productView ? "grey" : "black"}` }}
+              style={{ color: `${!productView ? "black" : "grey"}` }}
             >
               <FaThList />
             </span>

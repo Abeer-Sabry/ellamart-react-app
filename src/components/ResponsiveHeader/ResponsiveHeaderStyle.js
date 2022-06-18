@@ -23,6 +23,9 @@ export const ResHeaderWrap = styled.div`
   }
   .cart {
     text-align: right;
+    a {
+      color: black;
+    }
   }
   @media only screen and (max-width: 1200px) {
     display: block;

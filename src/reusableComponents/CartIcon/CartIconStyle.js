@@ -1,8 +1,9 @@
 import styled from "styled-components";
 // ----- COLORS ----- //
 import { Blue } from "../../constants";
-
-export const Icon = styled.span`
+// ----- REACT-ROUTER-DOM ----- //
+import { Link } from "react-router-dom";
+export const Icon = styled(Link)`
   position: relative;
   svg {
     font-size: 27px;

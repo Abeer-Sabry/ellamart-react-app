@@ -3,12 +3,15 @@ import React from "react";
 import { Icon } from "./CartIconStyle";
 // ---- ICONS ---- //
 import { BsCart3 } from "react-icons/bs";
-
+// ---- REDUX ---- //
+import { useSelector } from "react-redux";
 const CartIcon = props => {
+  const { cartItems } = useSelector(state => state.cart);
+
   return (
-    <Icon>
+    <Icon to={props.to}>
       <BsCart3 />
-      <span>{props.total}</span>
+      <span>{cartItems ? cartItems.length : 0}</span>
     </Icon>
   );
 };

@@ -1,12 +1,15 @@
 import styled from "styled-components";
 // ----- CONSTANTS-COLORS ----- //
-import { darkGray, lightBlue, lightYellow, Red } from "../../../constants";
+import { darkGray, lightBlue, Red } from "../../../constants";
 
 export const ItemWrapper = styled.div`
   display: ${props => (props.view ? "block" : "grid")};
   grid-template-columns: 5fr 7fr;
   grid-column-gap: 40px;
   align-items: center;
+  @media only screen and (max-width: 790px) {
+    display: ${props => (props.view ? "block" : "block")};
+  }
 
   div.imgDiv {
     position: relative;
@@ -58,12 +61,7 @@ export const ItemWrapper = styled.div`
     .ant-rate {
       margin-bottom: 7px;
     }
-    /* div {
-      display: inline-block;
-      position: relative;
-      font-size: 15px;
-      color: ${lightYellow};
-    } */
+
     div.colorCircles {
       margin-bottom: 10px;
       span {

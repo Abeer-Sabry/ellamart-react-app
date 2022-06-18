@@ -5,7 +5,7 @@ import { CustomContainer } from "../../constants";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, decreaseQty } from "../../Redux/cart/cartSlice";
 // ---- HELPERS ----- //
-import { formatPrice } from "../../helpers";
+import { formatPrice, checkDiscountPercent } from "../../helpers";
 // ---- REACT-ICONS ----- //
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
 //  ----- STYLED-COMPONENT ----- //
@@ -22,6 +22,7 @@ import {
 const Cart = () => {
   const { cartItems } = useSelector(state => state.cart);
   const dispatch = useDispatch();
+
   return (
     <>
       <CustomContainer>
@@ -40,22 +41,17 @@ const Cart = () => {
 
             {cartItems
               ? cartItems.map(item => {
+                  console.log(checkDiscountPercent(item));
                   return (
                     <ProductItemCartTable key={item.id}>
                       <ProductThumb>
-                        {/* <img src={item?.img[0]["mainImg"]} alt="" /> */}
+                        <img src={item.img[0]["mainImg"]} alt={item.title} />
                         <div>
                           <p>{item.title}</p>
                         </div>
                       </ProductThumb>
                       <ProductDetails>
-                        <div>
-                          {formatPrice(
-                            item.discountPercent
-                              ? (item.discountPercent / 100) * item.price
-                              : item.price
-                          )}
-                        </div>
+                        <div>{formatPrice(checkDiscountPercent(item))}</div>
                         <div>
                           {" "}
                           <span onClick={() => dispatch(decreaseQty(item))}>
@@ -71,22 +67,30 @@ const Cart = () => {
                     </ProductItemCartTable>
                   );
                 })
-              : null}
+              : "your cart is empty"}
           </div>
           <OrderSummary>
             <h4>Order Summary </h4>
             <div className="subtotal">
               <p>sub total</p>
-              <span> {cartItems.reduce((total, item) => total + item.qty * item.price, 0)}</span>
-              <span>0</span>
+              <span>
+                {" "}
+                {formatPrice(cartItems.reduce((acc, item) => acc + item.qty * item.price, 0))}
+              </span>
             </div>
             <p>Get shipping estimates </p>
             <select name="" id="">
-              <option value="">hii</option>
+              <option value="">united states</option>
+              <option value="">England</option>
+              <option value="">turkey</option>
+              <option value="">spain</option>
             </select>
             <div className="estimatesInput">
               <select name="" id="">
-                <option value="">hi select</option>
+                <option value="">united states</option>
+                <option value="">England</option>
+                <option value="">turkey</option>
+                <option value="">spain</option>
               </select>
               <input type="text" />
             </div>

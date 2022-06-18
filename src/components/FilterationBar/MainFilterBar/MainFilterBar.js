@@ -21,7 +21,6 @@ import { CategoryDiv } from "../../../reusableComponents/CategoryDiv/CategoryDiv
 import { BsCheck } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 // ---- ANT-DESIGN ---- //
-// import "antd/dist/antd.css";
 import { Checkbox } from "antd";
 
 const colors = [
@@ -64,7 +63,6 @@ const colors = [
 
 const MainFilterBar = () => {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
-  // console.log("colorState", selectedColor);
 
   return (
     <Wrapper>

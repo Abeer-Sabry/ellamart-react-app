@@ -7,6 +7,9 @@ export const CartWrap = styled.div`
   grid-template-columns: 9fr 3fr;
   grid-column-gap: 40px;
   margin: 50px 0;
+  @media only screen and (max-width: 1080px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 export const CartHeaderContent = styled.div`
   background-color: ${lightGray};
@@ -16,6 +19,7 @@ export const CartHeaderContent = styled.div`
 export const CartList = styled.div`
   display: grid;
   grid-template-columns: 8fr 4fr;
+
   align-items: center;
   .cartDetails {
     display: grid;
@@ -36,9 +40,13 @@ export const CartList = styled.div`
 export const ProductItemCartTable = styled.div`
   display: grid;
   grid-template-columns: 8fr 4fr;
+  grid-column-gap: 30px;
   align-items: center;
   border: 1px solid ${Gray};
   padding: 25px 30px;
+  /* @media only screen and (max-width: 576px) {
+    grid-template-columns: 10fr 2fr;
+  } */
 `;
 export const ProductThumb = styled.div`
   display: flex;
@@ -46,9 +54,24 @@ export const ProductThumb = styled.div`
   img {
     width: 100px;
     margin-right: 15px;
+    @media only screen and (max-width: 500px) {
+      width: 70px;
+    }
+    @media only screen and (max-width: 466px) {
+      width: 50px;
+    }
   }
   p {
     font-size: 14px;
+    @media only screen and (max-width: 576px) {
+      font-size: 12px;
+    }
+    @media only screen and (max-width: 475px) {
+      font-size: 11px;
+    }
+    @media only screen and (max-width: 466px) {
+      font-size: 10px;
+    }
   }
 `;
 export const ProductDetails = styled.div`
@@ -62,6 +85,9 @@ export const ProductDetails = styled.div`
   div:nth-child(2),
   div:nth-child(3) {
     text-align: center;
+    @media only screen and (max-width: 466px) {
+      font-size: 10px;
+    }
   }
   div:nth-child(2) {
     display: flex;
@@ -71,6 +97,9 @@ export const ProductDetails = styled.div`
   }
 `;
 export const OrderSummary = styled.div`
+  @media only screen and (max-width: 1080px) {
+    margin-top: 50px;
+  }
   h4 {
     font-size: 14px;
     font-weight: bold;
@@ -106,9 +135,12 @@ export const OrderSummary = styled.div`
   }
   .estimatesInput {
     display: grid;
-    grid-template-columns: 10fr 2fr;
+    grid-template-columns: 7fr 5fr;
     grid-column-gap: 20px;
     margin: 14px 0;
+    select {
+      padding: 10px 12px;
+    }
     input {
       border: 1px solid ${Gray};
       padding: 0 12px;
@@ -126,6 +158,9 @@ export const OrderSummary = styled.div`
     &:hover {
       background-color: ${lightBlue};
       color: white;
+    }
+    @media only screen and (max-width: 1080px) {
+      width: 200px;
     }
   }
 `;
