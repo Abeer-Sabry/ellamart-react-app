@@ -13,17 +13,17 @@ export const Wrapper = styled.div`
     display: none;
   }
   @media only screen and (max-width: 992px) {
-    display: none;
+    display: ${props => (props.filterBar ? " block" : "none")};
     position: fixed;
     content: "";
     top: 0;
     left: 0;
-    z-index: 99;
     width: 230px;
     height: 100vh;
     overflow-y: scroll;
     padding: 50px 30px;
-    background-color: yellow;
+    background-color: white;
+    z-index: 999999;
     .closeIcon {
       display: block;
       position: absolute;
@@ -34,6 +34,19 @@ export const Wrapper = styled.div`
     }
   }
 `;
+
+export const Overlay = styled.div`
+  display: ${props => (props.filterBar ? " block" : "none")};
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 80;
+`;
+
 export const Section = styled.div`
   padding-bottom: 25px;
   border-bottom: 1px solid ${Gray};

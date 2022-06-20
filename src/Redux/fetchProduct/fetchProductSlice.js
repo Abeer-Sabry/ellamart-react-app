@@ -14,13 +14,16 @@ export const fetchProductsAsync = createAsyncThunk(
 
 const productsCollection = createSlice({
   name: "products",
-  initialState: { products: [], loading: false, error: null, productView: true },
+  initialState: { products: [], loading: false, error: null, productView: true, filterBar: false },
   reducers: {
     gridViewAction: state => {
       state.productView = true;
     },
     listViewAction: state => {
       state.productView = false;
+    },
+    showFilterBarAction: state => {
+      state.filterBar = !state.filterBar;
     },
   },
   extraReducers: {
@@ -37,5 +40,5 @@ const productsCollection = createSlice({
     },
   },
 });
-export const { listViewAction, gridViewAction } = productsCollection.actions;
+export const { listViewAction, gridViewAction, showFilterBarAction } = productsCollection.actions;
 export default productsCollection.reducer;

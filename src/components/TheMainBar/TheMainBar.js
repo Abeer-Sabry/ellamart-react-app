@@ -6,7 +6,11 @@ import { SelectWrapper, BarWrapper, ResponsiveBreadCrumb } from "./TheMainBarSty
 // ----- REACT-ICONS ----- //
 import { FaTh, FaThList, FaSlidersH } from "react-icons/fa";
 // ----- REDUX AND ACTIONS ----- //
-import { gridViewAction, listViewAction } from "../../Redux/fetchProduct/fetchProductSlice";
+import {
+  gridViewAction,
+  listViewAction,
+  showFilterBarAction,
+} from "../../Redux/fetchProduct/fetchProductSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const { Option } = Select;
@@ -31,7 +35,7 @@ const TheMainBar = () => {
           <Breadcrumb.Item>New In</Breadcrumb.Item>
         </Breadcrumb>
         {/* -----  RESPONSIVE-SLIDER-ICON ----- */}
-        <span className="sliderIcon">
+        <span className="sliderIcon" onClick={() => dispatch(showFilterBarAction())}>
           <FaSlidersH />
         </span>
 
