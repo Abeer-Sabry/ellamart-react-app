@@ -7,10 +7,7 @@ import SingleProductModel from "../ProductModel/ProductModel";
 import { ItemWrapper } from "./ProductItemStyle";
 // ----- REDUX AND REDUX-ACTIONS ---- //
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getSingleProduct,
-  // showModelAction,
-} from "../../../Redux/ProductQuickModel/ProductModelSlice";
+import { getSingleProduct } from "../../../Redux/ProductQuickModel/ProductModelSlice";
 // ----- HELPERS ---- //
 import { formatPrice, checkDiscountPercent } from "../../../helpers/index";
 

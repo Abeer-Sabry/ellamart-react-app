@@ -6,8 +6,8 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { AliceWrap } from "./ProductCarouselStyle";
 // ------ REACT-ICONS ------ //
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
+
 const ProductCarousel = props => {
-  // const { img, title, rating, price, colors, discountPercent } = props;
   const { items } = props;
   const responsive = {
     0: {

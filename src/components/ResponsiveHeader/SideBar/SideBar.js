@@ -13,6 +13,7 @@ const SideBar = ({ state }) => {
   const { subContainer } = useSelector(state => state.navContent);
   const [selectedSubMenu, setSelectedSubMenu] = useState([]);
   const dispatch = useDispatch();
+  console.log("selectedMenu", selectedSubMenu);
 
   return (
     <SideBarWrapper
@@ -36,7 +37,7 @@ const SideBar = ({ state }) => {
                     dispatch(subContainerOpen());
                   }}
                 />
-                <Transition
+                {/* <Transition
                   in={entryStore && subContainer}
                   timeout={300}
                   mountOnEnter
@@ -45,7 +46,7 @@ const SideBar = ({ state }) => {
                   {state => {
                     return <SubSideBar state={state} subEntry={selectedSubMenu[0]["entries"]} />;
                   }}
-                </Transition>
+                </Transition> */}
               </div>
             );
           })}

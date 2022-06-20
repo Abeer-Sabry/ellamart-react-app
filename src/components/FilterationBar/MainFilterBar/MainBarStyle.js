@@ -52,16 +52,7 @@ export const Section = styled.div`
 `;
 
 // ---- CATEGORY-SECTION ---- //
-export const List = styled.ul`
-  /* li {
-    margin-bottom: 10px;
-    a {
-      font-weight: bold;
-      font-size: 14px;
-      color: black;
-    }
-  } */
-`;
+export const List = styled.ul``;
 export const ColorWrapper = styled.div`
   button {
     width: 33px;

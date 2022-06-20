@@ -2,16 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const productModel = createSlice({
   name: "productView",
-  initialState: { showModel: false, singleProduct: {} },
+  initialState: { showModel: false, modelProduct: {} },
   reducers: {
     getSingleProduct: (state, action) => {
-      state.singleProduct = action.payload;
+      state.modelProduct = action.payload;
       state.showModel = true;
-      console.log(state.singleProduct);
     },
-    closeModal: (state, action) => {
+    closeModal: state => {
       state.showModel = false;
-      console.log(state.singleProduct);
+      state.modelProduct = {};
     },
   },
 });

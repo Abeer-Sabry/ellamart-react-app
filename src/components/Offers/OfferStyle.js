@@ -20,23 +20,13 @@ export const ImgRow = styled.div`
   @media only screen and (max-width: 501px) {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .img4 {
-    grid-row: 2;
-    grid-column: 1/6;
-  }
-  .img5 {
-    grid-row: 2;
-    grid-column: 6/12;
-  }
-  */ div {
+  div {
     overflow: hidden;
-    text-align: center;
+  }
+  img {
     &:hover {
-      img {
-        transform: scale(1.2, 1.2);
-        transition: ease 0.5s;
-      }
+      transform: scale(1.2, 1.2);
+      transition: ease 0.5s;
     }
   }
 `;

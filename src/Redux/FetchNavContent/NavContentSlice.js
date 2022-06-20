@@ -6,6 +6,7 @@ export const getNavContentAsync = createAsyncThunk(
     try {
       const data = await fetch("https://amazon-navbar.herokuapp.com/fetch");
       const res = await data.json();
+      console.log("contentNav", res);
       return res;
     } catch (error) {}
   }

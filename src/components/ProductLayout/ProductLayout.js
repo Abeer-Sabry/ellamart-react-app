@@ -44,8 +44,7 @@ const ProductLayout = props => {
   const [activeSize, setActiveSize] = useState(0);
   const [activeColor, setActiveColor] = useState(0);
   const [disable, setDisable] = useState(false);
-  console.log("size", activeSize);
-  console.log("colors", colors);
+
   // ----- CheckBox-Change-FUNC
   const onChangeHandler = () => {
     setDisable(!disable);
@@ -95,7 +94,6 @@ const ProductLayout = props => {
         <div>
           {sizes
             ? sizes.map((size, index) => {
-                console.log(size, activeSize);
                 return (
                   <SizeFrame
                     key={index}
