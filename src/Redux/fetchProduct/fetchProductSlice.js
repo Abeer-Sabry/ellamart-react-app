@@ -4,9 +4,9 @@ export const fetchProductsAsync = createAsyncThunk(
   "products/fetchProductsAsync",
   async (_, thunkAPI) => {
     try {
-      const response = await fetch("https://ellemart-e-commerce-sabry-api.herokuapp.com/Products");
+      const response = await fetch("https://test-products-api.onrender.com/Products");
       const data = await response.json();
-      // console.log("data", data);
+
       return data;
     } catch (error) {}
   }

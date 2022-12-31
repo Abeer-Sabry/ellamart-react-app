@@ -20,8 +20,10 @@ import { formatPrice } from "../../helpers/index";
 // ----- ANT-DESIGN ----- //
 import { Checkbox } from "antd";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../Redux/cart/cartSlice";
 
-const ProductLayout = props => {
+const ProductLayout = singleProduct => {
   const {
     images,
     title,
@@ -35,7 +37,9 @@ const ProductLayout = props => {
     description,
     sizes,
     colors,
-  } = props;
+  } = singleProduct;
+
+  const dispatch = useDispatch();
   // ----- PRICE-PERCENTAGE
   const percentage = discount ? (discount / 100) * price : null;
   const newPrice = price - percentage;
@@ -125,7 +129,7 @@ const ProductLayout = props => {
         <p className="quant">Quantity:</p>
         <ButtonsWrapper>
           <span>1</span>
-          <button>Add to cart</button>
+          <button onClick={() => dispatch(addToCart(singleProduct))}>Add to cart</button>
           <span>
             <BsSuitHeart />
           </span>

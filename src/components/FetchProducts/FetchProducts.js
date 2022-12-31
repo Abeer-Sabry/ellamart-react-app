@@ -24,9 +24,9 @@ const FetchProducts = () => {
       ) : (
         <Wrapper view={productView}>
           {products.map(product => (
-            <>
+            <div key={product.id}>
               <ProductItem {...product} />
-            </>
+            </div>
           ))}
         </Wrapper>
       )}

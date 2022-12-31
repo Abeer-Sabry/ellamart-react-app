@@ -12,7 +12,6 @@ const cartSlice = createSlice({
             item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item
           )
         : [...state.cartItems, { ...action.payload, qty: 1 }];
-      console.log("payload", action.payload);
     },
     // responsible for decreasing the quantity of cart items
     decreaseQty: (state, action) => {

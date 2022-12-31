@@ -12,7 +12,6 @@ import { checkDiscountPercent, formatPrice } from "../../../helpers";
 const ProductModel = () => {
   const dispatch = useDispatch();
   const { showModel, modelProduct } = useSelector(state => state.productModel);
-  console.log("modal", modelProduct);
   return (
     <>
       <Modal

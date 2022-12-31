@@ -14,7 +14,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Transition } from "react-transition-group";
 // ---- REDUX AND ACTIONS ----- //
 import { useDispatch, useSelector } from "react-redux";
-import { getNavContentAsync } from "../../Redux/FetchNavContent/NavContentSlice";
+// import { getNavContentAsync } from "../../Redux/FetchNavContent/NavContentSlice";
 import { Link } from "react-router-dom";
 
 const ResponsiveHeader = () => {
@@ -25,7 +25,7 @@ const ResponsiveHeader = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getNavContentAsync());
+    // dispatch(getNavContentAsync());
   }, [dispatch]);
   return (
     <CustomContainer>

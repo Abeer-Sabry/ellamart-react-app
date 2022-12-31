@@ -2,12 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchProductDetailsAsync = createAsyncThunk(
   "singleProduct/fetchProductDetailsAsync",
-  async (title, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const response = await fetch(`https://ellemart-e-commerce-sabry-api.herokuapp.com/Products?title=${title}`);
+      const response = await fetch(`https://test-products-api.onrender.com/Products/${id}`);
       const data = await response.json();
-      console.log("data", data[0]);
-      return data[0];
+      return data;
     } catch (error) {}
   }
 );

@@ -23,40 +23,27 @@ import { Breadcrumb } from "antd";
 const SingleProduct = () => {
   const { singleProduct } = useSelector(state => state.singleProduct);
   const { products } = useSelector(state => state.products);
-  console.log("products", products);
-  const { title } = useParams();
+
+  const { id } = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchProductDetailsAsync(title));
+    dispatch(fetchProductDetailsAsync(id));
     dispatch(fetchProductsAsync());
-  }, [dispatch, title]);
+  }, [dispatch, id]);
   // ---TABS-STATE
   const [activeTab, setActiveTab] = useState("Description");
 
   return (
     <>
       <CustomContainer>
+        {" "}
         <Breadcrumb style={{ marginTop: "30px" }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item> New In</Breadcrumb.Item>
-          <Breadcrumb.Item>{title}</Breadcrumb.Item>
+          <Breadcrumb.Item>{id}</Breadcrumb.Item>
         </Breadcrumb>
-        <ProductLayout
-          images={singleProduct?.images ? singleProduct.images : []}
-          title={singleProduct.title}
-          rating={singleProduct.rating}
-          reviews={singleProduct.reviews}
-          vendor={singleProduct.vendor}
-          sku={singleProduct.sku}
-          stock={singleProduct.stock}
-          price={singleProduct.price}
-          discount={singleProduct.discountPercent}
-          description={singleProduct.description}
-          sizes={singleProduct.sizes}
-          colors={singleProduct.colors}
-        />
-        {/* ----- ASK-EXPERT-SECTION ----- */}
+        <ProductLayout {...singleProduct} /> {/* ----- ASK-EXPERT-SECTION ----- */}
         <CustomerCareWrapper>
           <div className="expert">
             <div className="expertImg">

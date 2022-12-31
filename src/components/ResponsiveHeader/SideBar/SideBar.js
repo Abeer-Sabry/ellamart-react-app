@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Transition } from "react-transition-group";
+// import { Transition } from "react-transition-group";
 import { subContainerOpen } from "../../../Redux/FetchNavContent/NavContentSlice";
 // ----- STYLED-COMPONENT ----- //
 import { SideBarWrapper } from "./SideBarStyle";
 import SideNavRow from "./SideNavRow/SideNavRow";
-import SubSideBar from "./SubSideBar/SubSideBar";
+// import SubSideBar from "./SubSideBar/SubSideBar";
 // ----- COMPONENTS ----- //
 
 const SideBar = ({ state }) => {
   const { entryStore } = useSelector(state => state.navContent);
-  const { subContainer } = useSelector(state => state.navContent);
-  const [selectedSubMenu, setSelectedSubMenu] = useState([]);
+  // const { subContainer } = useSelector(state => state.navContent);
+  // const [selectedSubMenu, setSelectedSubMenu] = useState([]);
   const dispatch = useDispatch();
-  console.log("selectedMenu", selectedSubMenu);
 
   return (
     <SideBarWrapper
@@ -33,7 +32,7 @@ const SideBar = ({ state }) => {
                 <SideNavRow
                   text={entry.title}
                   onClick={() => {
-                    setSelectedSubMenu(entryStore.filter(item => item._id === entry._id));
+                    // setSelectedSubMenu(entryStore.filter(item => item._id === entry._id));
                     dispatch(subContainerOpen());
                   }}
                 />

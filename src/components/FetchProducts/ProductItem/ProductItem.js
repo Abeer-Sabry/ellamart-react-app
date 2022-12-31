@@ -37,7 +37,7 @@ const ProductItem = product => {
     <>
       <ItemWrapper key={id} view={productView}>
         <div className="imgDiv" onMouseEnter={EnterHoverHandler} onMouseLeave={LeaveHoverHandler}>
-          <Link to={`/collections/new-in/products/${title}`}>
+          <Link to={`/collections/new-in/products/${id}`}>
             <img src={hover ? img[1]["hovered"] : img[0]["mainImg"]} alt="" />
           </Link>
           <button onClick={() => dispatch(getSingleProduct(product))} className="view">

@@ -12,7 +12,7 @@ const Pages = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collections/new-in" element={<ProductsCollections />} />
-        <Route path="/collections/new-in/products/:title" element={<SingleProduct />} />
+        <Route path="/collections/new-in/products/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
