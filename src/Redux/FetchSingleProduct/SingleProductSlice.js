@@ -4,7 +4,7 @@ export const fetchProductDetailsAsync = createAsyncThunk(
   "singleProduct/fetchProductDetailsAsync",
   async (id, thunkAPI) => {
     try {
-      const response = await fetch(`https://test-products-api.onrender.com/Products/${id}`);
+      const response = await fetch(`https://test-products-api.onrender.com/products/${id}`);
       const data = await response.json();
       return data;
     } catch (error) {}

@@ -23,6 +23,7 @@ import { Breadcrumb } from "antd";
 const SingleProduct = () => {
   const { singleProduct } = useSelector(state => state.singleProduct);
   const { products } = useSelector(state => state.products);
+  console.log("single", singleProduct.images);
 
   const { id } = useParams();
   const dispatch = useDispatch();
