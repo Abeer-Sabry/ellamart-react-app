@@ -49,7 +49,8 @@ const ProductLayout = ({ singleProduct }) => {
         "loading"
       ) : (
         <Wrapper>
-          <ImageGallery items={images} />
+          {singleProduct.images ? <ImageGallery items={singleProduct.images} /> : []}
+
           <div>
             <TitleWrapper>
               <h2>{singleProduct?.title}</h2>
