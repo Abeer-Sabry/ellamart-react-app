@@ -41,13 +41,15 @@ const ProductLayout = ({ singleProduct }) => {
   const onChangeHandler = () => {
     setDisable(!disable);
   };
+  const images = singleProduct?.images;
+  console.log("images", images);
   return (
     <>
       {loading ? (
         "loading"
       ) : (
         <Wrapper>
-          <ImageGallery items={singleProduct?.images} />
+          <ImageGallery items={images} />
           <div>
             <TitleWrapper>
               <h2>{singleProduct?.title}</h2>
