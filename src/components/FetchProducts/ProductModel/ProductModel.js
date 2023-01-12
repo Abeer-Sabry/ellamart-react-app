@@ -22,20 +22,6 @@ const ProductModel = () => {
         onCancel={() => dispatch(closeModal())}
       >
         {showModel ? (
-          // <ProductLayout
-          //   images={modelProduct?.images ? modelProduct.images : []}
-          //   title={modelProduct.title}
-          //   rating={modelProduct.rating}
-          //   reviews={modelProduct.reviews}
-          //   vendor={modelProduct.vendor}
-          //   sku={modelProduct.sku}
-          //   stock={modelProduct.stock}
-          //   price={modelProduct.price}
-          //   discount={modelProduct.discountPercent}
-          //   description={modelProduct.description}
-          //   sizes={modelProduct.sizes}
-          //   colors={modelProduct.colors}
-          // />
           <DivModal>
             <div>
               <img src={modelProduct.img.map(img => img.mainImg)} alt="" />

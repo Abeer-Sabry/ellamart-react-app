@@ -35,7 +35,7 @@ const ProductItem = product => {
 
   return (
     <>
-      <ItemWrapper key={id} view={productView}>
+      <ItemWrapper view={productView}>
         <div className="imgDiv" onMouseEnter={EnterHoverHandler} onMouseLeave={LeaveHoverHandler}>
           <Link to={`/collections/new-in/products/${id}`}>
             <img src={hover ? img[1]["hovered"] : img[0]["mainImg"]} alt="" />

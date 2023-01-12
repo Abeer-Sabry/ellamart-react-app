@@ -23,7 +23,6 @@ import { Breadcrumb } from "antd";
 const SingleProduct = () => {
   const { singleProduct } = useSelector(state => state.singleProduct);
   const { products } = useSelector(state => state.products);
-  console.log("single", singleProduct.images);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -44,7 +43,8 @@ const SingleProduct = () => {
           <Breadcrumb.Item> New In</Breadcrumb.Item>
           <Breadcrumb.Item>{id}</Breadcrumb.Item>
         </Breadcrumb>
-        <ProductLayout {...singleProduct} /> {/* ----- ASK-EXPERT-SECTION ----- */}
+        <ProductLayout singleProduct={singleProduct && singleProduct} key={singleProduct.id} />{" "}
+        {/* ----- ASK-EXPERT-SECTION ----- */}
         <CustomerCareWrapper>
           <div className="expert">
             <div className="expertImg">
